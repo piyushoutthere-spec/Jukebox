@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Saloon Jukebox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="jukebox">
+        <header class="header">
+            <div class="logo">♫</div>
+            <div>
+                <h1>THE SALOON JUKEBOX</h1>
+                <p>Pick a tune.Keep the night alive.</p>
+            </div>
+        </header>
+        <section class="now-playing">
+            <div class="album-art">
+                   ♫
+            </div>
+            <div class="track-info">
+                <span>NOW PLAYIN</span>
+                <h2 id="nowPlayingTitle">
+                    Nothing Playing
+                </h2>
+                <p id="nowPlayingArtist">
+                    Choose a track from the queue
+                </p>
+            </div>
+        </section>
+        <section class="controls">
+            <button id="previousButton" class="control-button">
+                ⏮
+            </button>
+            <button id="playButton" class="play-button">
+                ▶
+            </button>
+            <button id="nextButton" class="control-button">
+                ⏭
+            </button>
+        </section>
+        <section class="volume">
+            <span>🔊</span>
+            <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+            >
+        </section>
+        <section class="library">
+            <div class="section-heading">
+                <h2>TRACKS</h2>
+                <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tracks..."
+                >
+            </div>
+            <div id="trackList" class="track-list">
+
+            </div>
+        </section>
+        <section class="queue">
+            <div class="section-heading">
+                <h2>QUEUE</h2>
+                <span id="queueCount">
+                    0 tracks
+                </span>
+            </div>
+            <div id="queueList" class="queue-list">
+                <p class="empty-queue">
+                    Your queue is empty.
+                </p>
+            </div>
+        </section>
+        <audio id="audioPlayer"></audio>
+        <footer>
+            <p>SALOON JUKEBOX • BUILD 01</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
